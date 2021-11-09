@@ -1,0 +1,173 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background: linear-gradient(to right bottom, #ea2c62 0%, #120078 100%);
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    margin:0 auto ;
+
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+   
+    height: 80vh;
+    background: url(/pic2.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.main-container::before{
+    counter-reset: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0 ,0 ,0 ,0), rgba(0, 0, 0,.6));
+    z-index: 0;
+}
+
+.top{
+    text-align:center;   
+    z-index: 999; 
+}
+
+.top h1{
+    color: white;
+    line-height:2 ;
+}
+
+.top input,
+.top button{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.top input{
+    background-color: rgba(0, 0 ,0 ,.5);
+    border-bottom: 2px solid green;
+    border-radius:10px 0 10px 0 ;
+    text-align: center;
+    font-size: 14px;
+}
+
+.top input:focus{
+    color: white;
+    font-size: 15px;
+}
+
+.top input::placeholder{
+    color: white;
+}
+
+.top button{
+    background-color: rgb(221, 130, 25);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.top button:hover{
+
+    background: #a85d1f;
+}
+
+.top .error{
+    color: white;
+    font-size: 15px;    
+}
+
+.icon{
+    text-align: center;
+    padding-top:15px ;
+    
+
+}
+
+.icon img {
+    width:80px;
+    height:80px;
+}
+
+.location{
+    padding:15px ;
+    text-align: center;
+    color: white;
+    line-height: 1.6;  
+    font-size: 20px;  
+}
+
+.location .city{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.current{
+    width: 100%;
+    position: relative;
+    padding-top: 10px;
+    color: white;
+    text-align:left;
+    font-size:20px;
+}
+
+.current::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: white;
+}
+
+.current > * {
+    padding-bottom:10px ;
+
+}
+
+.demo{
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top: -400px;
+    left: 220px;
+    z-index: 999;
+    font-size: 20px;
+}
